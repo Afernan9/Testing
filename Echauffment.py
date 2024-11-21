@@ -22,13 +22,14 @@ def process_input(input):
         return output
     
 def main():
+    global input
     print(greeting())
     while True:
         #capture input from user
-        input = input("I'm listening (type 'quit' to exit): ")
-        process_input(input)
+        word = input("I'm listening (type 'quit' to exit): ")
+        print(process_input(word))
         
-        if input == "quit":
+        if word == "quit":
             print(goodbye())
             break
 
